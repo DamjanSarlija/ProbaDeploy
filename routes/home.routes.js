@@ -15,7 +15,6 @@ router.get("/", async (req, res) => {
     rejectUnauthorized: false // Required for external connections on Render
   }
 });
-
     await client.connect();
     
     const rezultat = await client.query("SELECT * FROM objave")
@@ -66,7 +65,6 @@ router.get("/izbrisiSve", async (req, res) => {
     rejectUnauthorized: false // Required for external connections on Render
   }
 });
-    })
 
     await client.connect();
     await client.query("DELETE FROM objave")
